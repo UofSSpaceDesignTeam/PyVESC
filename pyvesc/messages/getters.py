@@ -5,5 +5,7 @@ class ReqSubscription(metaclass=VESCMessage):
 
     """
     id = 36
-    fields = [ ]
+    fields = [
+            ('subscription', 's')
+    ]
 
