@@ -42,3 +42,13 @@ class SetCurrentBrake(metaclass=VESCMessage):
     fields = [
         ('current_brake', 'f')
     ]
+
+class BlinkLed(metaclass=VESCMessage):
+    """ Blink an LED. For testing Arduino communication
+
+    ivar status: 1 for led on, 0 for led off
+    """
+    id = 40
+    fields = [
+            ('status', 'i ')
+    ]
