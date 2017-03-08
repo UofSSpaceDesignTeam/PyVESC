@@ -1,5 +1,6 @@
 from pyvesc.messages.base import VESCMessage
 
+
 class SetDutyCycle(metaclass=VESCMessage):
     """ Set the duty cycle.
 
@@ -29,7 +30,7 @@ class SetCurrent(metaclass=VESCMessage):
     """
     id = 6
     fields = [
-        ('current', 'f')
+        ('current', 'i')
     ]
 
 
@@ -40,7 +41,7 @@ class SetCurrentBrake(metaclass=VESCMessage):
     """
     id = 7
     fields = [
-        ('current_brake', 'f')
+        ('current_brake', 'i')
     ]
 
 class BlinkLed(metaclass=VESCMessage):
