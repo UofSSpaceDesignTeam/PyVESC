@@ -26,10 +26,27 @@ def encode(msg):
 
     :param msg: Message to be encoded. All fields must be initialized.
     :type msg: PyVESC message
-    
+
     :return: The packet.
     :rtype: bytes
     """
     msg_payload = pyvesc.messages.base.VESCMessage.pack(msg)
+    packet = pyvesc.packet.codec.frame(msg_payload)
+    return packet
+
+
+def encode_request(msg_cls):
+    """
+    Encodes a PyVESC message for requesting a getter message. This function
+    should be called when you want to request a VESC to return a getter
+    message.
+
+    :param msg_cls: The message type which you are requesting.
+    :type msg_cls: pyvesc.messages.getters.[requested getter]
+
+    :return: The encoded PyVESC message which can be sent.
+    :rtype: bytes
+    """
+    msg_payload = pyvesc.messages.base.VESCMessage.pack(msg_cls, header_only=True)
     packet = pyvesc.packet.codec.frame(msg_payload)
     return packet
