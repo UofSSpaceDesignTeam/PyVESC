@@ -76,6 +76,13 @@ class SetRotorPositionMode(metaclass=VESCMessage):
         ('pos_mode', 'b')
     ]
 
+class ExampleSendMessage(metaclass=VESCMessage):
+    id = 39
+    fields = [
+            ('string', 's')
+            ]
+
+
 class BlinkLed(metaclass=VESCMessage):
     """ Blink an LED. For testing Arduino communication
 
