@@ -48,3 +48,11 @@ class ReqSubscription(metaclass=VESCMessage):
             ('subscription', 's')
     ]
 
+class LidarDataMessage(metaclass=VESCMessage):
+    """ Data ascociated with the Lidar"""
+    id = 41
+    fields = [
+            ('distance', 'i'),
+            ('angle', 'i')
+            ]
+
