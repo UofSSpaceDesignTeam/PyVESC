@@ -54,13 +54,13 @@ class LidarDataMessage(metaclass=VESCMessage):
     fields = [
             ('distance', 'i'),
             ('angle', 'i')
-            ]
+    ]
 
 class CompassDataMessage(metaclass=VESCMessage):
-	"""Data associated with the BNO055 Digital Compass"""
-	id = 42
-	fields = [
-			('heading1', 'f'),
-			('pitch1', 'f'),
-			('roll1', 'f')
-			]
+    """Data associated with the BNO055 Digital Compass"""
+    id = 42
+    fields = [
+            ('heading1', 'f'),
+            ('pitch1', 'f'),
+            ('roll1', 'f')
+    ]
