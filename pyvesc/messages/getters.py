@@ -53,7 +53,8 @@ class LidarDataMessage(metaclass=VESCMessage):
     id = 41
     fields = [
             ('distance', 'i'),
-            ('angle', 'i')
+            ('angle', 'i', 100),
+            ('tilt', 'i'),
     ]
 
 class CompassDataMessage(metaclass=VESCMessage):
