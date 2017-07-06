@@ -65,3 +65,12 @@ class CompassDataMessage(metaclass=VESCMessage):
             ('pitch', 'i', 1000),
             ('roll', 'i', 1000)
     ]
+
+class AccelerometerMessage(metaclass=VESCMessage):
+    """Data associated with the BNO055 Accerlerometer"""
+    id = 44
+    fields = [
+            ('x', 'i', 1000),
+            ('y', 'i', 1000),
+            ('z', 'i', 1000),
+    ]
