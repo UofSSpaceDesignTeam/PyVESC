@@ -29,8 +29,8 @@ class GetValues(metaclass=VESCMessage):
 
 class GetRotorPosition(metaclass=VESCMessage):
     """ Gets rotor position data
-    
-    Must be set to DISP_POS_MODE_ENCODER or DISP_POS_MODE_PID_POS (Mode 3 or 
+
+    Must be set to DISP_POS_MODE_ENCODER or DISP_POS_MODE_PID_POS (Mode 3 or
     Mode 4). This is set by SetRotorPositionMode (id=21).
     """
     id = 21
@@ -55,6 +55,7 @@ class LidarDataMessage(metaclass=VESCMessage):
             ('distance', 'i'),
             ('angle', 'i', 100),
             ('tilt', 'i'),
+            ('finished', i)
     ]
 
 class CompassDataMessage(metaclass=VESCMessage):
@@ -74,3 +75,10 @@ class AccelerometerMessage(metaclass=VESCMessage):
             ('y', 'i', 1000),
             ('z', 'i', 1000),
     ]
+
+class StartLidarScan(metaclass=VESCMessage):
+    id = 45
+    fields = [
+            ('flag', 'i')
+    ]
+
