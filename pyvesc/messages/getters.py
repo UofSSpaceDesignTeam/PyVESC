@@ -55,7 +55,7 @@ class LidarDataMessage(metaclass=VESCMessage):
             ('distance', 'i'),
             ('angle', 'i', 100),
             ('tilt', 'i'),
-            ('finished', i)
+            ('finished', 'i')
     ]
 
 class CompassDataMessage(metaclass=VESCMessage):
